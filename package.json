@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "serverless-add-api-key": "^4.2.1",
+    "serverless-deployment-bucket": "^1.6.0",
+    "serverless-iam-roles-per-function": "^3.2.0",
+    "serverless-plugin-aws-alerts": "^1.7.5",
+    "serverless-plugin-canary-deployments": "^0.8.0",
+    "serverless-plugin-lambda-dead-letter": "^1.2.1",
+    "serverless-plugin-optimize": "^4.2.1-rc.1",
+    "serverless-plugin-resource-tagging": "^1.2.0",
+    "serverless-plugin-split-stacks": "^1.11.3",
+    "serverless-python-requirements": "^5.4.0"
+  }
+}

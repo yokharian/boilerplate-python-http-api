@@ -1,0 +1,22 @@
+main-GET:
+#  provisionedConcurrency: 1
+  handler: lambdas/main.handler
+  events:
+    - httpApi:
+        path: /
+        method: get
+        authorizer: aws_iam
+        cors:
+          origin: '*'
+          headers: '*'
+          allowCredentials: true
+  iamRoleStatements:
+      - Effect: Allow
+        Resource: '*'
+        Action:           # READ ONLY
+          - s3:Get*
+          - s3:List*
+          - s3-object-lambda:Get*
+          - s3-object-lambda:List*
+        # NON-READ
+          - s3:PutObject

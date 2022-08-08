@@ -1,0 +1,17 @@
+invalidateCaches: true
+#dockerizePip: true # recommended if you are not on linux
+fileName: requirements-sls.txt
+slim: true
+slimPatternsAppendDefaults: true
+slimPatterns:
+  - '**/*.png'
+  - '**/*.yml'
+  - '**/*.md'
+  - '**/*.csv'
+  - '**/tests/**'
+useDownloadCache: false
+useStaticCache: false
+# If it is not used with care, the packages will not be installed correctly.
+#pipCmdExtraArgs: [--compile,--no-deps]
+noDeploy: [botocore, boto3]
+usePoetry: true
