@@ -1,0 +1,16 @@
+org: noeliamx
+app: python-http-api
+service: python-http-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
